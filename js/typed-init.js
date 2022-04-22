@@ -2,11 +2,9 @@ let typed = new Typed(".typed", {
   strings: [
     "Angular developer",
     "JavaScript developer",
-    "mobile developer",
-    "Java developer",
     "web developer",
+    "mobile developer",
     "WordPress developer",
-    "Python developer",
     "UX/UI designer",
   ],
   typeSpeed: 60,
