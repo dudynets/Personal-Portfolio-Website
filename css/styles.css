@@ -56,7 +56,7 @@ header {
 
 header * {
     height: 50px;
-    width: 154.9059139784946px;
+    width: 155px;
 }
 
 header *:hover {
@@ -164,19 +164,19 @@ header *:hover {
 @keyframes elasticus {
     0% {
         transform: scale(1, 0);
-        transform-origin: 0% 0%;
+        transform-origin: 0 0;
     }
     50% {
         transform: scale(1, 1);
-        transform-origin: 0% 0%;
+        transform-origin: 0 0;
     }
     50.1% {
         transform: scale(1, 1);
-        transform-origin: 0% 100%;
+        transform-origin: 0 100%;
     }
     100% {
         transform: scale(1, 0);
-        transform-origin: 0% 100%;
+        transform-origin: 0 100%;
     }
 }
 
@@ -240,9 +240,23 @@ header *:hover {
 
 .no-webp .card-4 .card-img,
 .no-webp .card-4 .card-img-hover {
+    background-image: url("../assets/images/no-webp/nmt-calculator.png");
+    background-size: contain;
+    background-color: #1572a1;
+}
+
+.no-webp .card-5 .card-img,
+.no-webp .card-5 .card-img-hover {
     background-image: url("../assets/images/no-webp/debate-reviews-tool.png");
     background-size: contain;
-    background-color: #3293d1;
+    background-color: #007a6e;
+}
+
+.no-webp .card-6 .card-img,
+.no-webp .card-6 .card-img-hover {
+    background-image: url("../assets/images/no-webp/soft-prevention.png");
+    background-size: contain;
+    background-color: #173259;
 }
 
 .webp .card-1 .card-img,
@@ -268,9 +282,23 @@ header *:hover {
 
 .webp .card-4 .card-img,
 .webp .card-4 .card-img-hover {
+    background-image: url("../assets/images/webp/nmt-calculator.webp");
+    background-size: contain;
+    background-color: #1572a1;
+}
+
+.webp .card-5 .card-img,
+.webp .card-5 .card-img-hover {
     background-image: url("../assets/images/webp/debate-reviews-tool.webp");
     background-size: contain;
-    background-color: #3293d1;
+    background-color: #007a6e;
+}
+
+.webp .card-6 .card-img,
+.webp .card-6 .card-img-hover {
+    background-image: url("../assets/images/webp/soft-prevention.webp");
+    background-size: contain;
+    background-color: #173259;
 }
 
 .card-img {
@@ -312,6 +340,19 @@ header *:hover {
     cursor: pointer;
 }
 
+.coming-soon {
+    position: absolute;
+    z-index: 2;
+    top: 24px;
+    left: 24px;
+    background: #1c1c1c;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
 .card-info {
     z-index: 2;
     border-bottom-left-radius: 12px;
@@ -351,6 +392,11 @@ header *:hover {
     opacity: 1;
 }
 
+.card:hover .coming-soon {
+    padding: 0;
+    background: transparent;
+}
+
 .more-on-github {
     position: relative;
     text-decoration: none;
@@ -366,7 +412,7 @@ header *:hover {
 .more-on-github > span:before {
     content: "";
     position: absolute;
-    width: 0px;
+    width: 0;
     height: 1px;
     background-color: #fff;
     left: 0;
@@ -378,7 +424,6 @@ header *:hover {
     content: "";
     display: block;
     position: absolute;
-    height: 1px;
     left: 55px;
     top: 50%;
     width: 7px;
@@ -439,7 +484,7 @@ header *:hover {
 }
 
 .more-on-github:hover span:before {
-    width: 0px;
+    width: 0;
 }
 
 .more-on-github:hover span:after {
@@ -448,7 +493,7 @@ header *:hover {
 
 .divider {
     width: calc(80% - 70px);
-    color: white;
+    color: #ffffff;
 }
 
 .contact {
@@ -516,7 +561,6 @@ a {
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 3;
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -574,14 +618,14 @@ a {
 
 @keyframes animation {
     0% {
-        background-position: 0% 0%;
+        background-position: 0 0;
     }
     100% {
-        background-position: 100% 0%;
+        background-position: 100% 0;
     }
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
     .card {
         margin: 20px !important;
         width: calc(100% / 2 - 40px) !important;
@@ -625,7 +669,7 @@ a {
     }
 
     .scroll-down-bar {
-        height: 32.5px;
+        height: 33px;
     }
 
     header {
@@ -634,7 +678,7 @@ a {
 
     header * {
         height: 30px;
-        width: 92.9435483871px;
+        width: 93px;
     }
 
     .debate-reviews-tool-modal-video,
@@ -643,7 +687,7 @@ a {
     }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
     .cards {
         width: 90% !important;
     }
