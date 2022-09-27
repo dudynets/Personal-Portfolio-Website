@@ -12,17 +12,16 @@
   <link href="assets/extra/favicon.png" rel="apple-touch-icon"/>
   <link href="manifest.json" rel="manifest"/>
   <link href="css/styles.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link href="css/fonts.css" rel="stylesheet"/>
+  <link href="css/aos.css" rel="stylesheet"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <meta content="yes" name="apple-mobile-web-app-capable"/>
   <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
   <meta content="#111" name="theme-color"/>
 </head>
 
-<body ontouchstart="">
+<body>
 <header id="header">
   <picture data-aos="fade-down" onclick="window.scrollTo(0, 0)">
     <source srcset="assets/images/webp/logo_white.webp" type="image/webp"/>
@@ -43,13 +42,13 @@
           <picture id="waving-hand">
             <source srcset="assets/images/webp/waving-hand.webp" type="image/webp"/>
             <source srcset="assets/images/no-webp/waving-hand.png" type="image/png"/>
-            <img alt="Oleksandr Dudynets" src="assets/images/no-webp/waving-hand.png"/>
+            <img height="78px" width="78px" alt="Oleksandr Dudynets" src="assets/images/no-webp/waving-hand.png"/>
           </picture>
 
           <picture id="raised-hand" class="hidden">
             <source srcset="assets/images/webp/raised-hand.webp" type="image/webp"/>
             <source srcset="assets/images/no-webp/raised-hand.png" type="image/png"/>
-            <img alt="Oleksandr Dudynets" src="assets/images/no-webp/raised-hand.png"/>
+            <img height="78px" width="78px" alt="Oleksandr Dudynets" src="assets/images/no-webp/raised-hand.png"/>
           </picture>
         </span>
 
@@ -74,7 +73,7 @@
           <picture>
             <source srcset="assets/images/webp/rocket.webp" type="image/webp"/>
             <source srcset="assets/images/no-webp/rocket.png" type="image/png"/>
-            <img alt="Oleksandr Dudynets" src="assets/images/no-webp/rocket.png"/>
+            <img height="80px" width="80px" alt="Oleksandr Dudynets" src="assets/images/no-webp/rocket.png"/>
           </picture>
         </span>
     <h1>Take a look at some of my best projects</h1>
@@ -89,7 +88,8 @@
                 <picture>
                   <source srcset="assets/images/webp/party-popper.webp" type="image/webp"/>
                   <source srcset="assets/images/no-webp/party-popper.png" type="image/png"/>
-                  <img alt="Oleksandr Dudynets" src="assets/images/no-webp/party-popper.png"/>
+                  <img height="13px" width="13px" alt="Oleksandr Dudynets"
+                       src="assets/images/no-webp/party-popper.png"/>
                 </picture>
               </span>
           Coming soon on iOS!
@@ -97,7 +97,7 @@
         <div class="card-img-hover"></div>
         <div class="card-info">
           <span class="card-category">Android & Web App</span>
-          <h3 class="card-title">Love Counter – Days in Love</h3>
+          <h2 class="card-title">Love Counter – Days in Love</h2>
           <span class="card-desc">Keep track of how long you have been together.</span>
         </div>
       </a>
@@ -109,7 +109,7 @@
         <div class="card-img-hover"></div>
         <div class="card-info">
           <span class="card-category">Android App</span>
-          <h3 class="card-title">Tea Hub – Tea Recipes and Brewing Timer</h3>
+          <h2 class="card-title">Tea Hub – Tea Recipes and Brewing Timer</h2>
           <span class="card-desc">Everything you need to help you learn more about tea.</span>
         </div>
       </a>
@@ -121,7 +121,7 @@
         <div class="card-img-hover"></div>
         <div class="card-info">
           <span class="card-category">Website & ERM System</span>
-          <h3 class="card-title">Palet Service</h3>
+          <h2 class="card-title">Palet Service</h2>
           <span class="card-desc">Leader in the wood packaging industry.</span>
         </div>
       </a>
@@ -133,7 +133,7 @@
         <div class="card-img-hover"></div>
         <div class="card-info">
           <span class="card-category">Web App</span>
-          <h3 class="card-title">NMT Calculator</h3>
+          <h2 class="card-title">NMT Calculator</h2>
           <span class="card-desc">An application that calculates your average NMT score.</span>
         </div>
       </a>
@@ -145,7 +145,7 @@
         <div class="card-img-hover"></div>
         <div class="card-info">
           <span class="card-category">Web App</span>
-          <h3 class="card-title">Debate Reviews Tool</h3>
+          <h2 class="card-title">Debate Reviews Tool</h2>
           <span class="card-desc">A comprehensive tool for managing a debate club.</span>
         </div>
       </div>
@@ -157,7 +157,7 @@
         <div class="card-img-hover"></div>
         <div class="card-info">
           <span class="card-category">Website</span>
-          <h3 class="card-title">Soft Prevention</h3>
+          <h2 class="card-title">Soft Prevention</h2>
           <span class="card-desc">Innovative health screening systems.</span>
         </div>
       </a>
@@ -177,19 +177,19 @@
   <div data-aos="zoom-out">
     <h1>Feel free to<br/>contact me</h1>
     <div class="icons">
-      <a href="https://www.linkedin.com/in/dudynets/">
+      <a href="https://www.linkedin.com/in/dudynets/" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://github.com/dudynets">
+      <a href="https://github.com/dudynets" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://t.me/dudynets">
+      <a href="https://t.me/dudynets" aria-label="Telegram">
         <i class="fab fa-telegram"></i>
       </a>
-      <a href="https://instagram.com/odudynets">
+      <a href="https://instagram.com/odudynets" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="mailto:hello@dudynets.pp.ua">
+      <a href="mailto:hello@dudynets.pp.ua" aria-label="Email">
         <i class="fa-solid fa-square-envelope"></i>
       </a>
     </div>
@@ -212,8 +212,8 @@
 </div>
 </body>
 
-<script crossorigin="anonymous" rel="preconnect" src="https://kit.fontawesome.com/d3ac7ab780.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/fontawesome.js"></script>
+<script src="js/aos.js"></script>
 <script src="js/glorytoukraine.js"></script>
 <script src="js/header.js"></script>
 <script src="js/video-background.js"></script>

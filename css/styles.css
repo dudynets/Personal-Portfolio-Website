@@ -107,12 +107,9 @@ header * {
 
 .main-emoji img {
   height: 78px;
+  width: 78px;
   margin-bottom: -8px;
   margin-right: 4px;
-}
-
-.ec-wave {
-  cursor: pointer;
 }
 
 .main .color {
@@ -199,6 +196,7 @@ header * {
 
 .portfolio-heading-icon img {
   height: 80px;
+  width: 80px;
 }
 
 .portfolio h1 {
@@ -354,6 +352,7 @@ header * {
 
 .coming-soon span img {
   height: 13px;
+  width: 13px;
   margin-right: 4px;
   margin-bottom: -1.5px;
 }
@@ -376,6 +375,7 @@ header * {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: 700;
+  font-size: 1.17em;
 }
 
 .card-desc {
@@ -749,6 +749,7 @@ img {
 
   .main-emoji img {
     height: 40px !important;
+    width: 40px !important;
     margin-bottom: -4px !important;
   }
 
