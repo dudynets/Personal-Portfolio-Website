@@ -1,201 +1,230 @@
 <!DOCTYPE html>
-<html lang='en'>
-
+<html lang="en">
 <head>
-  <meta charset='UTF-8' />
+  <meta charset="UTF-8"/>
   <title>👨‍💻Oleksandr Dudynets</title>
   <meta
-    content="👋 Hello. I'm a Angular, Ionic, JavaScript, web, mobile and WordPress developer, freelancer and UX/UI designer from Lviv, Ukraine. Feel free to contact me."
-    name='description' />
-  <meta content='width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover' name='viewport' />
-  <link href='assets/extra/favicon.png' rel='shortcut icon' type='image/png' />
-  <link href='assets/extra/favicon.png' rel='apple-touch-icon' />
-  <link href='manifest.json' rel='manifest' />
-  <link href='css/styles.css' rel='stylesheet' />
-  <link href='https://fonts.googleapis.com' rel='preconnect' />
-  <link crossorigin href='https://fonts.gstatic.com' rel='preconnect' />
-  <link href='https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap' rel='stylesheet' />
-  <link href='https://unpkg.com/emoji.css/dist/emoji.min.css' rel='stylesheet' />
-  <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet'>
-  <meta content='width=device-width, initial-scale=1' name='viewport' />
-  <meta content='yes' name='apple-mobile-web-app-capable' />
-  <meta content='black' name='apple-mobile-web-app-status-bar-style' />
-  <meta content='#111' name='theme-color' />
+          content="👋 Hello. I'm a Angular, Ionic, JavaScript, web, mobile and WordPress developer, freelancer and UX/UI designer from Lviv, Ukraine. Feel free to contact me."
+          name="description"
+  />
+  <meta content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover" name="viewport"/>
+  <link href="assets/extra/favicon.png" rel="shortcut icon" type="image/png"/>
+  <link href="assets/extra/favicon.png" rel="apple-touch-icon"/>
+  <link href="manifest.json" rel="manifest"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="#111" name="theme-color"/>
 </head>
 
-<body ontouchstart=''>
-<header id='header'>
-  <picture data-aos='fade-down' onclick='window.scrollTo(0, 0)'>
-    <source srcset='assets/images/webp/logo_white.webp' type='image/webp' />
-    <source srcset='assets/images/no-webp/logo_white.png' type='image/png' />
-    <img alt='Oleksandr Dudynets' src='assets/images/no-webp/logo_white.png' />
+<body ontouchstart="">
+<header id="header">
+  <picture data-aos="fade-down" onclick="window.scrollTo(0, 0)">
+    <source srcset="assets/images/webp/logo_white.webp" type="image/webp"/>
+    <source srcset="assets/images/no-webp/logo_white.png" type="image/png"/>
+    <img alt="Oleksandr Dudynets" src="assets/images/no-webp/logo_white.png"/>
   </picture>
 </header>
 
-<div class='main-background'>
-  <video autoplay height='100%' id='video-background' loop muted playsinline preload='auto' width='100%'>
-    <source src='assets/extra/video-background.mp4' type='video/mp4' />
+<div class="main-background">
+  <video autoplay height="100%" id="video-background" loop muted playsinline preload="auto" width="100%">
+    <source src="assets/extra/video-background.mp4" type="video/mp4"/>
   </video>
 </div>
 
-<section class='main'>
-  <h1 data-aos='fade-right'>
-    <span class='ec ec-wave' id='video-background-toggle'></span>
-    Hello. I'm <span id='typed-article'>an</span><br />
-    <span class='color'>
-        <span class='typed' id='typed'></span>
-      </span>
-    <br />from Lviv, Ukraine.
+<section class="main">
+  <h1 data-aos="fade-right">
+        <span class="main-emoji" id="video-background-toggle">
+          <picture id="waving-hand">
+            <source srcset="assets/images/webp/waving-hand.webp" type="image/webp"/>
+            <source srcset="assets/images/no-webp/waving-hand.png" type="image/png"/>
+            <img alt="Oleksandr Dudynets" src="assets/images/no-webp/waving-hand.png"/>
+          </picture>
+
+          <picture id="raised-hand" class="hidden">
+            <source srcset="assets/images/webp/raised-hand.webp" type="image/webp"/>
+            <source srcset="assets/images/no-webp/raised-hand.png" type="image/png"/>
+            <img alt="Oleksandr Dudynets" src="assets/images/no-webp/raised-hand.png"/>
+          </picture>
+        </span>
+
+    Hello. I'm <span id="typed-article">an</span><br/>
+    <span class="color">
+          <span class="typed" id="typed"></span>
+        </span>
+    <br/>from Lviv, Ukraine.
   </h1>
 
-  <div class='scroll-down' data-aos='fade-up' data-aos-anchor-placement='top-bottom'>
-    <div class='scroll-down-text'>
-      <a href='#portfolio'>SCROLL DOWN</a>
+  <div class="scroll-down" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <div class="scroll-down-text">
+      <a href="#portfolio">SCROLL DOWN</a>
     </div>
-    <div class='scroll-down-bar'></div>
+    <div class="scroll-down-bar"></div>
   </div>
 </section>
 
-<section class='portfolio' id='portfolio'>
-  <div class='portfolio-heading' data-aos='fade-down'>
-    <span class='ec ec-rocket rocket'></span>
+<section class="portfolio" id="portfolio">
+  <div class="portfolio-heading" data-aos="fade-down">
+        <span class="portfolio-heading-icon">
+          <picture>
+            <source srcset="assets/images/webp/rocket.webp" type="image/webp"/>
+            <source srcset="assets/images/no-webp/rocket.png" type="image/png"/>
+            <img alt="Oleksandr Dudynets" src="assets/images/no-webp/rocket.png"/>
+          </picture>
+        </span>
     <h1>Take a look at some of my best projects</h1>
   </div>
 
-  <section class='cards'>
-    <article class='card card-1' data-aos='fade-up'>
-      <div class='card-img'></div>
-      <a href='https://get.lovecounter.pp.ua'>
-        <div class='coming-soon'>🎉 Coming soon on iOS!</div>
-        <div class='card-img-hover'></div>
-        <div class='card-info'>
-          <span class='card-category'>Android & Web App</span>
-          <h3 class='card-title'>Love Counter – Days in Love</h3>
-          <span class='card-desc'>Keep track of how long you have been together.</span>
+  <section class="cards">
+    <article class="card card-1" data-aos="fade-up">
+      <div class="card-img"></div>
+      <a href="https://get.lovecounter.pp.ua">
+        <div class="coming-soon">
+              <span>
+                <picture>
+                  <source srcset="assets/images/webp/party-popper.webp" type="image/webp"/>
+                  <source srcset="assets/images/no-webp/party-popper.png" type="image/png"/>
+                  <img alt="Oleksandr Dudynets" src="assets/images/no-webp/party-popper.png"/>
+                </picture>
+              </span>
+          Coming soon on iOS!
+        </div>
+        <div class="card-img-hover"></div>
+        <div class="card-info">
+          <span class="card-category">Android & Web App</span>
+          <h3 class="card-title">Love Counter – Days in Love</h3>
+          <span class="card-desc">Keep track of how long you have been together.</span>
         </div>
       </a>
     </article>
 
-    <article class='card card-2' data-aos='fade-up'>
-      <div class='card-img'></div>
-      <a href='https://get.teahub.pp.ua'>
-        <div class='card-img-hover'></div>
-        <div class='card-info'>
-          <span class='card-category'>Android App</span>
-          <h3 class='card-title'>
-            Tea Hub – Tea Recipes and Brewing Timer
-          </h3>
-          <span class='card-desc'>Everything you need to help you learn more about tea.</span>
+    <article class="card card-2" data-aos="fade-up">
+      <div class="card-img"></div>
+      <a href="https://get.teahub.pp.ua">
+        <div class="card-img-hover"></div>
+        <div class="card-info">
+          <span class="card-category">Android App</span>
+          <h3 class="card-title">Tea Hub – Tea Recipes and Brewing Timer</h3>
+          <span class="card-desc">Everything you need to help you learn more about tea.</span>
         </div>
       </a>
     </article>
 
-    <article class='card card-3' data-aos='fade-up'>
-      <div class='card-img'></div>
-      <a href='https://paletservice.com.ua'>
-        <div class='card-img-hover'></div>
-        <div class='card-info'>
-          <span class='card-category'>Website & ERM System</span>
-          <h3 class='card-title'>Palet Service</h3>
-          <span class='card-desc'>Leader in the wood packaging industry.</span>
+    <article class="card card-3" data-aos="fade-up">
+      <div class="card-img"></div>
+      <a href="https://paletservice.com.ua">
+        <div class="card-img-hover"></div>
+        <div class="card-info">
+          <span class="card-category">Website & ERM System</span>
+          <h3 class="card-title">Palet Service</h3>
+          <span class="card-desc">Leader in the wood packaging industry.</span>
         </div>
       </a>
     </article>
 
-    <article class='card card-4' data-aos='fade-up'>
-      <div class='card-img'></div>
-      <a href='https://dudynets.pp.ua/nmt'>
-        <div class='card-img-hover'></div>
-        <div class='card-info'>
-          <span class='card-category'>Web App</span>
-          <h3 class='card-title'>NMT Calculator</h3>
-          <span class='card-desc'>An application that calculates your average NMT score.</span>
+    <article class="card card-4" data-aos="fade-up">
+      <div class="card-img"></div>
+      <a href="https://dudynets.pp.ua/nmt">
+        <div class="card-img-hover"></div>
+        <div class="card-info">
+          <span class="card-category">Web App</span>
+          <h3 class="card-title">NMT Calculator</h3>
+          <span class="card-desc">An application that calculates your average NMT score.</span>
         </div>
       </a>
     </article>
 
-    <article class='card card-5' data-aos='fade-up'>
-      <div class='card-img'></div>
-      <div id='debate-reviews-tool-card'>
-        <div class='card-img-hover'></div>
-        <div class='card-info'>
-          <span class='card-category'>Web App</span>
-          <h3 class='card-title'>Debate Reviews Tool</h3>
-          <span class='card-desc'>A comprehensive tool for managing a debate club.</span>
+    <article class="card card-5" data-aos="fade-up">
+      <div class="card-img"></div>
+      <div id="debate-reviews-tool-card">
+        <div class="card-img-hover"></div>
+        <div class="card-info">
+          <span class="card-category">Web App</span>
+          <h3 class="card-title">Debate Reviews Tool</h3>
+          <span class="card-desc">A comprehensive tool for managing a debate club.</span>
         </div>
       </div>
     </article>
 
-    <article class='card card-6' data-aos='fade-up'>
-      <div class='card-img'></div>
-      <a href='https://softprevention.com'>
-        <div class='card-img-hover'></div>
-        <div class='card-info'>
-          <span class='card-category'>Website</span>
-          <h3 class='card-title'>Soft Prevention</h3>
-          <span class='card-desc'>Innovative health screening systems.</span>
+    <article class="card card-6" data-aos="fade-up">
+      <div class="card-img"></div>
+      <a href="https://softprevention.com">
+        <div class="card-img-hover"></div>
+        <div class="card-info">
+          <span class="card-category">Website</span>
+          <h3 class="card-title">Soft Prevention</h3>
+          <span class="card-desc">Innovative health screening systems.</span>
         </div>
       </a>
     </article>
   </section>
 
-  <a class='more-on-github' data-aos='fade-up' href='https://github.com/dudynets?tab=repositories'>
+  <a class="more-on-github" data-aos="fade-up" href="https://github.com/dudynets?tab=repositories">
     <span>View more on GitHub</span>
   </a>
 </section>
 
-<div data-aos='zoom-out'>
-  <hr class='divider' color='#ffffff' noshade size='1px' />
+<div data-aos="zoom-out">
+  <hr class="divider" color="#ffffff" noshade size="1px"/>
 </div>
 
-<section class='contact' id='contact'>
-  <div data-aos='zoom-out'>
-    <h1>Feel free to<br />contact me</h1>
-    <div class='icons'>
-      <a href='https://www.linkedin.com/in/dudynets/'>
-        <i class='fab fa-linkedin'></i>
+<section class="contact" id="contact">
+  <div data-aos="zoom-out">
+    <h1>Feel free to<br/>contact me</h1>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/dudynets/">
+        <i class="fab fa-linkedin"></i>
       </a>
-      <a href='https://github.com/dudynets'>
-        <i class='fab fa-github'></i>
+      <a href="https://github.com/dudynets">
+        <i class="fab fa-github"></i>
       </a>
-      <a href='https://t.me/dudynets'>
-        <i class='fab fa-telegram'></i>
+      <a href="https://t.me/dudynets">
+        <i class="fab fa-telegram"></i>
       </a>
-      <a href='https://instagram.com/odudynets'>
-        <i class='fab fa-instagram'></i>
+      <a href="https://instagram.com/odudynets">
+        <i class="fab fa-instagram"></i>
       </a>
-      <a href='mailto:hello@dudynets.pp.ua'>
-        <i class='fa-solid fa-square-envelope'></i>
+      <a href="mailto:hello@dudynets.pp.ua">
+        <i class="fa-solid fa-square-envelope"></i>
       </a>
     </div>
   </div>
 </section>
 
-<div class='modal-overlay' id='modal-overlay'>
-  <div class='debate-reviews-tool-modal-video'>
-    <video autoplay id='debate-reviews-tool-video' loop muted playsinline preload='auto' width='101%'>
-      <source src='assets/extra/debate-reviews-tool-preview.mp4' type='video/mp4' />
+<div class="modal-overlay" id="modal-overlay">
+  <div class="debate-reviews-tool-modal-video">
+    <video autoplay id="debate-reviews-tool-video" loop muted playsinline preload="auto" width="101%">
+      <source src="assets/extra/debate-reviews-tool-preview.mp4" type="video/mp4"/>
     </video>
   </div>
-  <div class='debate-reviews-tool-modal-description'>
-    <h3 class='debate-reviews-tool-modal-description-copyright'>© <span
-      id='debateReviewsToolModalDescriptionYear'></span> Debate Reviews Tool</h3>
-    <span class='debate-reviews-tool-modal-description-text'>Feel free to contact me for additional information.</span>
+  <div class="debate-reviews-tool-modal-description">
+    <h3 class="debate-reviews-tool-modal-description-copyright">
+      © <span id="debateReviewsToolModalDescriptionYear"></span> Debate Reviews Tool
+    </h3>
+    <span class="debate-reviews-tool-modal-description-text">Feel free to contact me for additional information.</span>
   </div>
-  <p class='close-button' id='modal-close'>Close</p>
+  <p class="close-button" id="modal-close">Close</p>
 </div>
 </body>
 
-<script crossorigin='anonymous' rel='preconnect' src='https://kit.fontawesome.com/d3ac7ab780.js'></script>
-<script src='https://unpkg.com/aos@2.3.1/dist/aos.js'></script>
-<script src='js/glorytoukraine.js'></script>
-<script src='js/header.js'></script>
-<script src='js/video-background.js'></script>
-<script src='js/typed.js'></script>
-<script src='js/typed-init.js'></script>
-<script src='js/modal.js'></script>
-<script src='js/webp-support.js'></script>
-<script>AOS.init();</script>
-<script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js');</script>
-
+<script crossorigin="anonymous" rel="preconnect" src="https://kit.fontawesome.com/d3ac7ab780.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/glorytoukraine.js"></script>
+<script src="js/header.js"></script>
+<script src="js/video-background.js"></script>
+<script src="js/typed.js"></script>
+<script src="js/typed-init.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/webp-support.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js');
+</script>
 </html>

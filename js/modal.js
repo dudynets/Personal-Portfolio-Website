@@ -1,6 +1,4 @@
-const debateReviewsToolCard = document.getElementById(
-  'debate-reviews-tool-card'
-);
+const debateReviewsToolCard = document.getElementById('debate-reviews-tool-card');
 const overflow = document.getElementById('modal-overlay');
 const closeButton = document.getElementById('modal-close');
 const video = document.getElementById('debate-reviews-tool-video');
@@ -17,4 +15,3 @@ closeButton.addEventListener('click', () => {
   video.pause();
   overflow.style.display = 'none';
 });
-

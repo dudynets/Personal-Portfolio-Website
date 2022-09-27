@@ -7,12 +7,12 @@ let typed = new Typed('.typed', {
     'mobile developer',
     'WordPress developer',
     'freelancer',
-    'UX/UI designer'
+    'UX/UI designer',
   ],
   typeSpeed: 60,
   loop: true,
   backSpeed: 40,
-  backDelay: 2000
+  backDelay: 2000,
 });
 
 const typedArticleEl = document.getElementById('typed-article');

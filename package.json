@@ -1,0 +1,21 @@
+{
+  "name": "personal-portfolio-website",
+  "version": "1.0.0",
+  "description": "Personal portfolio website built using HTML, CSS and JavaScript.",
+  "homepage": "https://dudynets.pp.ua",
+  "author": "Oleksandr Dudynets",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudynets/Personal-Portfolio-Website.git"
+  },
+  "scripts": {
+    "service-worker": "sw-precache --config=sw-precache-config.js"
+  },
+  "dependencies": {
+    "prettier": "^2.7.1"
+  },
+  "devDependencies": {
+    "sw-precache": "^5.2.1"
+  }
+}

@@ -1,7 +1,7 @@
 const videoBackgroundEl = document.getElementById('video-background');
-const videoBackgroundToggleEl = document.getElementById(
-  'video-background-toggle'
-);
+const videoBackgroundToggleEl = document.getElementById('video-background-toggle');
+const wavingHandEl = document.getElementById('waving-hand');
+const raisedHandEl = document.getElementById('raised-hand');
 
 let isPlaying = true;
 videoBackgroundToggleEl.addEventListener('click', toggle);
@@ -10,11 +10,11 @@ function toggle() {
   isPlaying = !isPlaying;
   if (isPlaying) {
     videoBackgroundEl.play();
-    videoBackgroundToggleEl.classList.remove('ec-raised-hand');
-    videoBackgroundToggleEl.classList.add('ec-wave');
+    wavingHandEl.classList.remove('hidden');
+    raisedHandEl.classList.add('hidden');
   } else {
     videoBackgroundEl.pause();
-    videoBackgroundToggleEl.classList.remove('ec-wave');
-    videoBackgroundToggleEl.classList.add('ec-raised-hand');
+    wavingHandEl.classList.add('hidden');
+    raisedHandEl.classList.remove('hidden');
   }
 }
