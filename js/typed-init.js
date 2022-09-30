@@ -18,6 +18,8 @@ let typed = new Typed('.typed', {
 const typedArticleEl = document.getElementById('typed-article');
 const typedEl = document.getElementById('typed');
 
+let previousArticle = 'an';
+
 setInterval(() => {
   if (
     typedEl.innerHTML &&
@@ -28,7 +30,9 @@ setInterval(() => {
       typedEl.innerHTML[0].toLowerCase() === 'u')
   ) {
     typedArticleEl.innerHTML = 'an';
+    previousArticle = 'an';
   } else {
-    typedArticleEl.innerHTML = 'a';
+    typedArticleEl.innerHTML = previousArticle;
+    previousArticle = 'a';
   }
 }, 100);
