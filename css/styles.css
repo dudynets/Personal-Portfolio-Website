@@ -24,7 +24,7 @@ html,
 body {
   background-color: #111;
   scroll-behavior: smooth;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden !important;
@@ -93,9 +93,9 @@ header * {
 
 .main h1 {
   position: relative;
-  line-height: 1.1;
+  line-height: 1.2;
   font-size: 78px;
-  font-weight: 700;
+  font-weight: 200;
   letter-spacing: 0.0125em;
   color: #fff;
   z-index: 2;
@@ -112,23 +112,29 @@ header * {
   margin-right: 4px;
 }
 
-.main .color {
+.main .wrapper {
   position: relative;
   z-index: 1;
+  color: transparent;
+  background: var(--gradient);
+  background-size: 800% 800%;
+  animation: animation 5s linear infinite;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
 }
 
-.main .color::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0.07em;
-  height: 0.1em;
-  width: 100%;
-  background: var(--gradient);
-  animation: animation 5s linear infinite;
-  background-size: 800% 800%;
-  z-index: -1;
-  transition: height 0.25s cubic-bezier(0.6, 0, 0.4, 1);
+.main .typed {
+  font-weight: 700;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.typed-cursor {
+  font-weight: 700;
+  margin-left: 3px;
+  color: white;
 }
 
 .scroll-down {
@@ -185,13 +191,23 @@ header * {
   align-items: center;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+.anchor {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  pointer-events: none;
 }
 
 .portfolio-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px 0 0 0;
+  margin: 70px 0 0 0;
 }
 
 .portfolio-heading-icon img {
@@ -200,11 +216,26 @@ header * {
 }
 
 .portfolio h1 {
+  line-height: 1.4;
   font-size: 45px;
   margin: 25px 20px 45px 20px;
-  font-weight: 700;
+  font-weight: 200;
   color: white;
   text-align: center;
+  background: var(--gradient);
+  background-size: 800% 800%;
+  animation: animation 5s linear infinite;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.portfolio-heading h1 .highlight {
+  font-weight: 700;
+  color: transparent;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .cards {
@@ -447,8 +478,10 @@ header * {
 }
 
 .divider {
+  height: 1px;
   width: calc(80% - 70px);
-  color: #ffffff;
+  background: #ffffff;
+  margin: 0 auto;
 }
 
 .contact {
@@ -782,6 +815,11 @@ img {
   }
 
   header {
+    height: 60px;
+  }
+
+  .anchor {
+    top: -60px;
     height: 60px;
   }
 

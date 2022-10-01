@@ -52,22 +52,23 @@
           </picture>
         </span>
 
-    Hello. I'm <span id="typed-article">an</span><br/>
-    <span class="color">
+    <span style="font-weight: 700">Hello.</span> I'm&nbsp<span id="typed-article">an</span><br/>
+    <span class="wrapper">
           <span class="typed" id="typed"></span>
         </span>
-    <br/>from Lviv, Ukraine.
+    <br/>from <span style="font-weight: 700">Lviv, Ukraine</span>
   </h1>
 
   <div class="scroll-down" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
     <div class="scroll-down-text">
-      <a href="#portfolio">SCROLL DOWN</a>
+      <a draggable="false" href="#portfolio">SCROLL DOWN</a>
     </div>
     <div class="scroll-down-bar"></div>
   </div>
 </section>
 
-<section class="portfolio" id="portfolio">
+<section class="portfolio">
+  <div class="anchor" id="portfolio"></div>
   <div class="portfolio-heading" data-aos="fade-down">
         <span class="portfolio-heading-icon">
           <picture>
@@ -76,13 +77,16 @@
             <img height="80px" width="80px" alt="Oleksandr Dudynets" src="assets/images/no-webp/rocket.png"/>
           </picture>
         </span>
-    <h1>Take a look at some of my best projects:</h1>
+    <h1>
+      Take a look at&nbspsome&nbspof&nbspmy<br/>
+      <span class="highlight">best&nbspprojects:</span>
+    </h1>
   </div>
 
   <section class="cards">
     <article class="card card-1" data-aos="fade-up">
       <div class="card-img"></div>
-      <a href="https://get.lovecounter.pp.ua">
+      <a draggable="false" href="https://get.lovecounter.pp.ua">
         <div class="coming-soon">
               <span>
                 <picture>
@@ -105,7 +109,7 @@
 
     <article class="card card-2" data-aos="fade-up">
       <div class="card-img"></div>
-      <a href="https://get.teahub.pp.ua">
+      <a draggable="false" href="https://get.teahub.pp.ua">
         <div class="card-img-hover"></div>
         <div class="card-info">
           <span class="card-category">Android App</span>
@@ -117,7 +121,7 @@
 
     <article class="card card-3" data-aos="fade-up">
       <div class="card-img"></div>
-      <a href="https://paletservice.com.ua">
+      <a draggable="false" href="https://paletservice.com.ua">
         <div class="card-img-hover"></div>
         <div class="card-info">
           <span class="card-category">Website & ERM System</span>
@@ -129,7 +133,7 @@
 
     <article class="card card-4" data-aos="fade-up">
       <div class="card-img"></div>
-      <a href="https://dudynets.pp.ua/nmt">
+      <a draggable="false" href="https://dudynets.pp.ua/nmt">
         <div class="card-img-hover"></div>
         <div class="card-info">
           <span class="card-category">Web App</span>
@@ -153,7 +157,7 @@
 
     <article class="card card-6" data-aos="fade-up">
       <div class="card-img"></div>
-      <a href="https://softprevention.com">
+      <a draggable="false" href="https://softprevention.com">
         <div class="card-img-hover"></div>
         <div class="card-info">
           <span class="card-category">Website</span>
@@ -164,32 +168,32 @@
     </article>
   </section>
 
-  <a class="more-on-github" data-aos="fade-up" href="https://github.com/dudynets?tab=repositories">
-    <span>view more on GitHub</span>
+  <a draggable="false" class="more-on-github" data-aos="fade-up" href="https://github.com/dudynets?tab=repositories">
+    <span class="more-on-github__text">view more on GitHub</span>
   </a>
 </section>
 
 <div data-aos="zoom-out">
-  <hr class="divider" color="#ffffff" noshade size="1px"/>
+  <div class="divider"></div>
 </div>
 
 <section class="contact" id="contact">
   <div data-aos="zoom-out">
     <h1>Feel free to<br/>contact me</h1>
     <div class="icons">
-      <a href="https://www.linkedin.com/in/dudynets/" aria-label="LinkedIn">
+      <a draggable="false" href="https://www.linkedin.com/in/dudynets/" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://github.com/dudynets" aria-label="GitHub">
+      <a draggable="false" href="https://github.com/dudynets" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://t.me/dudynets" aria-label="Telegram">
+      <a draggable="false" href="https://t.me/dudynets" aria-label="Telegram">
         <i class="fab fa-telegram"></i>
       </a>
-      <a href="https://instagram.com/odudynets" aria-label="Instagram">
+      <a draggable="false" href="https://instagram.com/odudynets" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="mailto:hello@dudynets.pp.ua" aria-label="Email">
+      <a draggable="false" href="mailto:hello@dudynets.pp.ua" aria-label="Email">
         <i class="fa-solid fa-square-envelope"></i>
       </a>
     </div>
@@ -225,6 +229,8 @@
   AOS.init();
 </script>
 <script>
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js');
+  // if ('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js');
+  document.addEventListener('touchstart', function () {
+  }, true);
 </script>
 </html>

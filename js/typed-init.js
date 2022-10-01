@@ -9,7 +9,7 @@ let typed = new Typed('.typed', {
     'freelancer',
     'UX/UI designer',
   ],
-  typeSpeed: 60,
+  typeSpeed: 80,
   loop: true,
   backSpeed: 40,
   backDelay: 2000,
