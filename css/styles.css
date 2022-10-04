@@ -288,6 +288,12 @@ header * {
   background-color: #173259;
 }
 
+.no-webp .card-7 .card-img,
+.no-webp .card-7 .card-img-hover {
+  background-image: url('../assets/images/no-webp/dmitruk-tattoo.png'), linear-gradient(135deg, #292929, #434343);
+  background-size: contain;
+}
+
 .webp .card-1 .card-img,
 .webp .card-1 .card-img-hover {
   background-image: url('../assets/images/webp/love-counter.webp');
@@ -327,6 +333,12 @@ header * {
   background-image: url('../assets/images/webp/soft-prevention.webp');
   background-size: contain;
   background-color: #173259;
+}
+
+.webp .card-7 .card-img,
+.webp .card-7 .card-img-hover {
+  background-image: url('../assets/images/webp/dmitruk-tattoo.webp'), linear-gradient(135deg, #292929, #434343);
+  background-size: contain;
 }
 
 .card-img {
@@ -478,9 +490,10 @@ header * {
 }
 
 .divider {
-  height: 1px;
+  height: 2px;
+  border-radius: 1px;
   width: calc(80% - 70px);
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
   margin: 0 auto;
 }
 
