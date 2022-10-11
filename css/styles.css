@@ -52,6 +52,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 header * {
@@ -163,6 +164,7 @@ header * {
   position: absolute;
   right: 0;
   width: 1px;
+  border-radius: 1px;
 }
 
 @keyframes elasticus {
@@ -360,9 +362,9 @@ header * {
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  border-radius: 12px;
   top: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .card {
@@ -372,12 +374,13 @@ header * {
   width: calc(100% / 3 - 70px);
   position: relative;
   border-radius: 12px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: white;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .coming-soon {
@@ -442,6 +445,7 @@ header * {
   position: absolute;
   width: 0;
   height: 1px;
+  border-radius: 1px;
   background-color: #fff;
   left: 0;
   top: 50%;
@@ -458,6 +462,7 @@ header * {
   height: 7px;
   border-top: 1px solid #fff;
   border-left: 1px solid #fff;
+  border-radius: 1px;
   transform: rotate(135deg) translateY(5px);
 }
 
@@ -506,7 +511,7 @@ header * {
   letter-spacing: 1px;
 }
 
-.contact div {
+.contact .contact-content {
   display: inline;
   color: transparent;
   background: var(--gradient);
