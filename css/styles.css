@@ -326,13 +326,16 @@ header * {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   color: white;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   pointer-events: all;
+}
+
+.card a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .coming-soon {
@@ -355,7 +358,7 @@ header * {
   margin-bottom: -1.5px;
 }
 
-.card a {
+.card-content {
   flex: 1;
   display: flex;
   align-items: center;
