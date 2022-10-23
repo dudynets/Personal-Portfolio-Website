@@ -1,18 +1,18 @@
 :root {
   --gradient: linear-gradient(
-          90deg,
-          #e1f549,
-          #29d0be,
-          #6cb8ea,
-          #ff5959,
-          #e1f549,
-          #29d0be,
-          #6cb8ea,
-          #ff5959,
-          #e1f549,
-          #29d0be,
-          #6cb8ea,
-          #ff5959
+    135deg,
+    #e1f549,
+    #29d0be,
+    #6cb8ea,
+    #ff5959,
+    #e1f549,
+    #29d0be,
+    #6cb8ea,
+    #ff5959,
+    #e1f549,
+    #29d0be,
+    #6cb8ea,
+    #ff5959
   );
 }
 
@@ -36,6 +36,10 @@ body {
   user-select: none;
 }
 
+body {
+  overflow: hidden;
+}
+
 header {
   position: fixed;
   height: 90px;
@@ -46,6 +50,7 @@ header {
   align-items: center;
   z-index: 3;
   transition: all ease-in-out 0.4s;
+  box-shadow: none !important;
 }
 
 .header-fixed {
@@ -335,7 +340,7 @@ header * {
 .card a {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 100%;
 }
 
 .coming-soon {
@@ -368,7 +373,11 @@ header * {
   z-index: 2;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  padding: 16px 24px 24px 24px;
+  padding: 20px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
 }
 
 .card-category {
@@ -380,7 +389,7 @@ header * {
 
 .card-title {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 1.17em;
 }
@@ -396,7 +405,9 @@ header * {
   color: #fff;
   font-size: 20px;
   font-weight: 300;
-  margin-bottom: 100px;
+  padding: 20px;
+  margin-top: -20px;
+  margin-bottom: 80px;
   margin-left: -60px;
 }
 
@@ -439,11 +450,11 @@ header * {
 .more-on-github > span {
   display: inline-block;
   position: relative;
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 
 .more-on-github > span:before {
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 
 .more-on-github > span:before {
@@ -470,6 +481,7 @@ header * {
   height: 100vh;
   text-align: center;
   letter-spacing: 1px;
+  position: relative;
 }
 
 .contact .contact-content {
@@ -482,6 +494,48 @@ header * {
   -moz-background-clip: text;
   -webkit-background-clip: text;
   margin-top: 20px;
+  position: relative;
+}
+
+.contact-background-wrapper {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-filter: blur(100px) brightness(0.75);
+  filter: blur(100px) brightness(0.75);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.contact-background {
+  width: 50vw;
+  height: 50vh;
+  border-radius: 50%;
+  background: var(--gradient);
+  background-size: 800% 800%;
+  overflow: auto;
+  -webkit-animation: animation 10s linear infinite, morph 10s ease-in-out infinite;
+  animation: animation 10s linear infinite, morph 10s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  }
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
 }
 
 .contact h1 {
@@ -625,7 +679,7 @@ img {
 
   .more-on-github:hover:before,
   .more-on-github:hover:after {
-    transition-delay: 0.2s;
+    transition-delay: 0.3s;
   }
 
   .more-on-github:hover:before {
@@ -634,11 +688,11 @@ img {
 
   .more-on-github:hover:after {
     opacity: 1;
-    transition-delay: 0.3s;
+    transition-delay: 0.5s;
   }
 
   .more-on-github:hover span:before {
-    transition-delay: 0.1s;
+    transition-delay: 0.2s;
   }
 
   .more-on-github:hover span:before {
@@ -731,7 +785,7 @@ img {
 
   .more-on-github:active:before,
   .more-on-github:active:after {
-    transition-delay: 0.2s;
+    transition-delay: 0.3s;
   }
 
   .more-on-github:active:before {
@@ -740,11 +794,11 @@ img {
 
   .more-on-github:active:after {
     opacity: 1;
-    transition-delay: 0.3s;
+    transition-delay: 0.4s;
   }
 
   .more-on-github:active span:before {
-    transition-delay: 0.1s;
+    transition-delay: 0.2s;
   }
 
   .more-on-github:active span:before {
@@ -914,7 +968,8 @@ img {
   animation-name: wave-animation;
   animation-duration: 2.5s;
   transform-origin: bottom right;
-  animation-delay: 0.75s;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes wave-animation {
