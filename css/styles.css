@@ -1,6 +1,22 @@
 :root {
   --gradient: linear-gradient(
     135deg,
+    #defc00,
+    #00ddc2,
+    #41bdff,
+    #ff4443,
+    #defc00,
+    #00ddc2,
+    #41bdff,
+    #ff4443,
+    #defc00,
+    #00ddc2,
+    #41bdff,
+    #ff4443
+  );
+
+  --gradientTinted: linear-gradient(
+    135deg,
     #e1f549,
     #29d0be,
     #6cb8ea,
@@ -144,7 +160,8 @@ header * {
 }
 
 .scroll-down {
-  height: 100px;
+  height: 110px;
+  padding: 0 10%;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -154,16 +171,32 @@ header * {
 }
 
 .scroll-down-text {
-  color: #d8d8d8;
+  color: #ffffff;
   font-weight: 300;
+  transition: background ease-in-out 0.3s;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  border-radius: 12px;
+  transform: translateX(-50%);
+}
+
+.scroll-down-text a {
+  padding: 10px;
+}
+
+.scroll-down-text:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .scroll-down-bar {
   animation: elasticus 2s cubic-bezier(1, 0, 0, 1) infinite;
-  background: #d8d8d8;
+  background: #ffffff;
   bottom: 0;
   display: inline-block;
-  height: 65px;
+  height: 60px;
   left: 0;
   margin: 0 auto;
   position: absolute;
@@ -497,31 +530,24 @@ header * {
   position: relative;
 }
 
-.contact-background-wrapper {
+.contact .contact-content:after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 0;
   width: 100%;
   height: 100%;
+  transform: scale(1.5, 1.75);
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-filter: blur(100px) brightness(0.75);
-  filter: blur(100px) brightness(0.75);
-  opacity: 0.3;
+  filter: blur(20px);
+  opacity: 0.15;
   pointer-events: none;
-}
-
-.contact-background {
-  width: 50vw;
-  height: 50vh;
   border-radius: 50%;
-  background: var(--gradient);
+  background: var(--gradientTinted);
   background-size: 800% 800%;
-  overflow: auto;
-  -webkit-animation: animation 10s linear infinite, morph 10s ease-in-out infinite;
   animation: animation 10s linear infinite, morph 10s ease-in-out infinite;
 }
 
