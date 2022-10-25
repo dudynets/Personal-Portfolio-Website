@@ -160,7 +160,7 @@ header * {
 }
 
 .scroll-down {
-  height: 110px;
+  height: 100px;
   padding: 0 10%;
   position: absolute;
   bottom: 0;
@@ -174,13 +174,12 @@ header * {
   color: #ffffff;
   font-weight: 300;
   transition: background ease-in-out 0.3s;
-  margin-bottom: 10px;
   padding: 10px 0;
   width: fit-content;
   position: absolute;
   left: 50%;
   border-radius: 12px;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-10px);
 }
 
 .scroll-down-text a {
@@ -533,8 +532,12 @@ header * {
   left: 0;
   width: 100%;
   height: 100%;
-  transform: scale(1.5, 1.75);
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0) scale(1.5, 1.75);
+  -webkit-transform: translate3d(0, 0, 0) scale(1.5, 1.75);
+  -moz-transform: translate3d(0, 0, 0) scale(1.5, 1.75);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -947,6 +950,7 @@ img {
 
   .scroll-down-text {
     font-size: 0.8em;
+    transform: translateX(-50%) translateY(-20px);
   }
 
   .scroll-down-bar {
