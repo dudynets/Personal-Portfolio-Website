@@ -82,6 +82,10 @@ header * {
   cursor: pointer;
 }
 
+header img {
+  object-fit: cover;
+}
+
 .main-background {
   position: absolute;
   height: 100vh;
@@ -180,6 +184,7 @@ header * {
   left: 50%;
   border-radius: 12px;
   transform: translateX(-50%) translateY(-10px);
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 15px -3px, rgb(0 0 0 / 5%) 0px 0px 6px -2px;
 }
 
 .scroll-down-text a {
@@ -355,7 +360,7 @@ header * {
   margin: 35px;
   transition: all 0.3s ease-in-out !important;
   background-color: #1c1c1c;
-  width: calc(100% / 3 - 70px);
+  min-width: calc(100% / 3 - 70px);
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -494,6 +499,10 @@ header * {
   left: calc(100% + 65px);
 }
 
+.more-on-github__text i {
+  margin: 0 2px;
+}
+
 .divider {
   height: 2px;
   border-radius: 1px;
@@ -545,6 +554,7 @@ header * {
   opacity: 0.15;
   pointer-events: none;
   border-radius: 50%;
+  border: 5px solid white;
   background: var(--gradientTinted);
   background-size: 800% 800%;
   animation: animation 10s linear infinite, morph 10s ease-in-out infinite;
@@ -585,7 +595,8 @@ header * {
 }
 
 .icons a {
-  padding: 0 5px;
+  padding: 5px;
+  margin-top: -5px;
 }
 
 a {
@@ -778,6 +789,15 @@ img {
   .scroll-down-text:hover {
     background: rgba(255, 255, 255, 0.15);
   }
+
+  .more-on-github:hover .more-on-github__text {
+    background: #1c1c1c;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 15px -3px, rgb(0 0 0 / 5%) 0px 0px 6px -2px;
+    border-radius: 12px;
+    padding: 9px 10px 11px 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
 }
 
 @media (hover: none) {
@@ -887,6 +907,15 @@ img {
 
   .scroll-down-text:active {
     background: rgba(255, 255, 255, 0.15);
+  }
+
+  .more-on-github:active .more-on-github__text {
+    background: #1c1c1c;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 15px -3px, rgb(0 0 0 / 5%) 0px 0px 6px -2px;
+    border-radius: 12px;
+    padding: 9px 10px 11px 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
   }
 }
 
@@ -998,10 +1027,57 @@ img {
   }
 }
 
+*:focus-visible,
+.card:focus-visible,
+.card:has(a:focus-visible),
+.more-on-github:focus-visible .more-on-github__text {
+  outline: 1px solid white;
+  border-radius: 12px;
+}
+
+.more-on-github:focus-visible .more-on-github__text {
+  padding: 9px 10px 11px 10px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.more-on-github:focus-visible {
+  outline: none;
+}
+
+.icons a:focus-visible {
+  padding: 10px 5px;
+}
+
+.glory-to-ukraine__support:has(a:focus-visible),
+.glory-to-ukraine__russian-warship:has(a:focus-visible) {
+  padding: 3px 0px;
+}
+
+.glory-to-ukraine a:focus-visible {
+  padding: 3px;
+  border-radius: 6px;
+}
+
 #waving-hand img {
   animation-name: wave-animation;
   animation-duration: 2.5s;
   transform-origin: bottom right;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-in-out;
+}
+
+#waving-hand img {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  transform-origin: bottom right;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-in-out;
+}
+
+#raised-hand img {
+  animation-name: stop-animation;
+  animation-duration: 0.75s;
   animation-iteration-count: 2;
   animation-timing-function: ease-in-out;
 }
@@ -1030,5 +1106,17 @@ img {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes stop-animation {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
   }
 }
