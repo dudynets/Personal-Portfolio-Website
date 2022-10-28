@@ -46,7 +46,6 @@ body {
   overflow-x: hidden !important;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -66,14 +65,14 @@ header {
   align-items: center;
   z-index: 3;
   transition: all ease-in-out 0.4s;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .header-fixed {
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
 }
 
 header * {
@@ -106,7 +105,7 @@ header img {
   max-height: -webkit-fill-available;
   background: no-repeat center center fixed;
   background-size: cover;
-  padding: 0 15%;
+  padding: 0 calc(10% + 35px);
 }
 
 .no-webp .main {
@@ -136,6 +135,7 @@ header img {
   width: 78px;
   margin-bottom: -8px;
   margin-right: 4px;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
 }
 
 .main .wrapper {
@@ -184,7 +184,8 @@ header img {
   left: 50%;
   border-radius: 12px;
   transform: translateX(-50%) translateY(-10px);
-  box-shadow: rgb(0 0 0 / 10%) 0px 0px 15px -3px, rgb(0 0 0 / 5%) 0px 0px 6px -2px;
+  box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
+  border: 1px solid transparent;
 }
 
 .scroll-down-text a {
@@ -253,6 +254,7 @@ header img {
 .portfolio-heading-icon img {
   height: 80px;
   width: 80px;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
 }
 
 .portfolio h1 {
@@ -353,20 +355,20 @@ header img {
   position: absolute;
   border-radius: 12px;
   top: 0;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 }
 
 .card {
   margin: 35px;
   transition: all 0.3s ease-in-out !important;
   background-color: #1c1c1c;
-  min-width: calc(100% / 3 - 70px);
+  width: calc(100% / 3 - 70px);
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   color: white;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
   pointer-events: all;
 }
 
@@ -499,6 +501,10 @@ header img {
   left: calc(100% + 65px);
 }
 
+.more-on-github__text {
+  border: 1px solid transparent;
+}
+
 .more-on-github__text i {
   margin: 0 2px;
 }
@@ -522,7 +528,9 @@ header img {
 }
 
 .contact .contact-content {
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: transparent;
   background: var(--gradient);
   background-size: 800% 800%;
@@ -574,15 +582,24 @@ header img {
 }
 
 .contact h1 {
-  text-transform: uppercase;
   font-size: 100px;
   line-height: 1;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 0 0;
   font-weight: 700;
   letter-spacing: 0.0125em;
   background-clip: text;
   -moz-background-clip: text;
   -webkit-background-clip: text;
+}
+
+.contact h1 {
+  color: white;
+  font-weight: 200;
+}
+
+.contact .contact-content--highlight {
+  color: transparent;
+  font-weight: 700;
 }
 
 .icons {
@@ -591,12 +608,17 @@ header img {
   align-items: center;
   font-size: 40px;
   color: transparent;
-  height: 100px;
+  gap: 10px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 30px 7.5% 0 7.5%;
 }
 
 .icons a {
-  padding: 5px;
-  margin-top: -5px;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all ease-in-out 0.3s;
 }
 
 a {
@@ -606,12 +628,9 @@ a {
 
 .icons i {
   display: inline;
-  color: transparent;
-  margin: 10px;
+  color: white;
+  margin: 5px;
   transition: font-size 0.4s;
-  background-clip: text;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .modal-overlay {
@@ -739,8 +758,9 @@ img {
     opacity: 0;
   }
 
-  .icons a:hover i {
-    font-size: 60px;
+  .icons a:hover {
+    scale: 1.2;
+    margin: 0 8px;
     cursor: pointer;
   }
 
@@ -759,44 +779,59 @@ img {
   }
 
   .card-1:hover {
-    box-shadow: rgba(233, 70, 105, 0.35) 0 0 100px 25px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    filter: drop-shadow(0 0 100px rgba(233, 70, 105, 0.35));
   }
 
   .card-2:hover {
-    box-shadow: rgb(101, 162, 47, 0.35) 0 0 100px 25px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    filter: drop-shadow(0 0 100px rgba(101, 162, 47, 0.35));
   }
 
   .card-3:hover {
-    box-shadow: rgba(37, 193, 136, 0.35) 0 0 100px 25px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    filter: drop-shadow(0 0 100px rgba(37, 193, 136, 0.35));
   }
 
   .card-4:hover {
-    box-shadow: rgba(20, 114, 161, 0.35) 0 0 100px 25px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    filter: drop-shadow(0 0 100px rgba(20, 114, 161, 0.35));
   }
 
   .card-5:hover {
-    box-shadow: rgba(0, 122, 110, 0.35) 0 0 100px 25px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    filter: drop-shadow(0 0 100px rgba(0, 122, 110, 0.35));
   }
 
   .card-6:hover {
-    box-shadow: rgba(24, 50, 89, 0.35) 0 0 100px 25px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    filter: drop-shadow(0 0 100px rgba(24, 50, 89, 0.35));
   }
 
   .card-7:hover {
-    box-shadow: rgba(51, 51, 51, 0.35) 0 0 100px 25px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    filter: drop-shadow(0 0 100px rgba(51, 51, 51, 0.35));
   }
 
   .scroll-down-text:hover {
     background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
   }
 
   .more-on-github:hover .more-on-github__text {
     background: #1c1c1c;
-    box-shadow: rgb(0 0 0 / 10%) 0px 0px 15px -3px, rgb(0 0 0 / 5%) 0px 0px 6px -2px;
+    box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
     border-radius: 12px;
     padding: 9px 10px 11px 10px;
     margin-top: -10px;
     margin-bottom: -10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .icons a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
   }
 }
 
@@ -858,8 +893,9 @@ img {
     opacity: 0;
   }
 
-  .icons a:active i {
-    font-size: 60px;
+  .icons a:active {
+    scale: 1.2;
+    margin: 0 12px;
     cursor: pointer;
   }
 
@@ -907,15 +943,21 @@ img {
 
   .scroll-down-text:active {
     background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .more-on-github:active .more-on-github__text {
     background: #1c1c1c;
-    box-shadow: rgb(0 0 0 / 10%) 0px 0px 15px -3px, rgb(0 0 0 / 5%) 0px 0px 6px -2px;
+    box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
     border-radius: 12px;
     padding: 9px 10px 11px 10px;
     margin-top: -10px;
     margin-bottom: -10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .icons a:active {
+    background: rgba(255, 255, 255, 0.12);
   }
 }
 
@@ -931,6 +973,10 @@ img {
 @media (max-width: 1200px) {
   .portfolio-heading {
     margin-top: 50px;
+  }
+
+  .main {
+    padding: 0 calc(10% + 20px);
   }
 
   .card {
@@ -950,6 +996,16 @@ img {
 
   h1 {
     font-size: 40px !important;
+  }
+
+  .contact h1 {
+    font-size: 45px !important;
+  }
+
+  .icons {
+    padding-top: 25px;
+    margin: 18px 7.5% 0 7.5%;
+    font-size: 25px;
   }
 
   .main-emoji img {
@@ -988,7 +1044,7 @@ img {
 
   header {
     height: 60px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
   }
 
   .anchor {
@@ -1008,6 +1064,10 @@ img {
 }
 
 @media (max-width: 576px) {
+  .main {
+    padding: 0 calc(5% + 20px);
+  }
+
   .cards {
     width: 90% !important;
   }
@@ -1045,13 +1105,9 @@ img {
   outline: none;
 }
 
-.icons a:focus-visible {
-  padding: 10px 5px;
-}
-
 .glory-to-ukraine__support:has(a:focus-visible),
 .glory-to-ukraine__russian-warship:has(a:focus-visible) {
-  padding: 3px 0px;
+  padding: 3px 0;
 }
 
 .glory-to-ukraine a:focus-visible {
@@ -1071,7 +1127,7 @@ img {
   animation-name: wave-animation;
   animation-duration: 2.5s;
   transform-origin: bottom right;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
 
