@@ -89,9 +89,8 @@
           <a draggable="false" href="https://get.lovecounter.pp.ua">
             <div class="card-img">
               <picture>
-                <source srcset="assets/images/webp/love-counter.webp" type="image/webp" />
-                <source srcset="assets/images/no-webp/love-counter.png" type="image/png" />
-                <img alt="Love Counter" src="assets/images/no-webp/love-counter.png" />
+                <source srcset="assets/extra/love-counter.svg" type="image/svg+xml" />
+                <img alt="Love Counter" src="assets/extra/love-counter.svg" />
               </picture>
             </div>
             <div class="card-content">
@@ -292,7 +291,7 @@
     AOS.init();
   </script>
   <script>
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js');
+    // if ('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js');
     document.addEventListener('touchstart', function () {}, true);
   </script>
 </html>

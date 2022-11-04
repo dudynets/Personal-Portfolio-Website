@@ -292,7 +292,7 @@ header img {
 
 .card-1 .card-img,
 .card-1 .card-img-hover {
-  background-color: #e94669;
+  background: linear-gradient(180deg, #ec617e, #e52a53);
 }
 
 .card-2 .card-img,
