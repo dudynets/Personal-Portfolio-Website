@@ -2,7 +2,7 @@
   <img src="assets/extra/favicon.png" alt="drawing" width="128"/>
 </a>
 
-# Programming 2022
+# Personal Porfolio Website
 
 <p><strong>Personal portfolio website built using HTML, CSS and JavaScript.</strong></p>
 
