@@ -6,7 +6,7 @@
 
 <p><strong>Personal portfolio website built using HTML, CSS and JavaScript.</strong></p>
 
-> Developed by [Oleksandr Dudynets](https://dudynets.pp.ua)
+> Developed by [Oleksandr Dudynets](https://dudynets.me)
 
 ## License
 
