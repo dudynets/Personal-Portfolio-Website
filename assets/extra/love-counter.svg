@@ -1,53 +1,55 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_4_58)">
-        <rect width="512" height="512"/>
-        <g filter="url(#filter0_ddiii_4_58)">
-            <path d="M184.5 138.109C224.004 138.109 256 169.48 256 208.179C256 169.48 287.996 138.109 327.5 138.109C367.004 138.109 399 169.48 399 208.179C399 266.506 341.192 287.08 263.007 379.922C262.146 380.942 261.073 381.762 259.863 382.324C258.653 382.886 257.334 383.177 256 383.177C254.666 383.177 253.347 382.886 252.137 382.324C250.927 381.762 249.854 380.942 248.993 379.922C170.808 287.08 113 266.506 113 208.179C113 169.48 144.996 138.109 184.5 138.109Z"
+    <g clip-path="url(#clip0_44_2)">
+        <g filter="url(#filter0_f_44_2)">
+            <path d="M176 120.857C220.2 120.857 256 154.64 256 196.317C256 154.64 291.8 120.857 336 120.857C380.2 120.857 416 154.64 416 196.317C416 259.129 351.32 281.286 263.84 381.271C262.877 382.369 261.676 383.251 260.322 383.857C258.968 384.462 257.493 384.776 256 384.776C254.507 384.776 253.032 384.462 251.678 383.857C250.324 383.251 249.123 382.369 248.16 381.271C160.68 281.286 96 259.129 96 196.317C96 154.64 131.8 120.857 176 120.857Z"
+                  fill="black" fill-opacity="0.05"/>
+        </g>
+        <g filter="url(#filter1_diii_44_2)">
+            <path d="M184.5 142.374C224.004 142.374 256 173.745 256 212.444C256 173.745 287.996 142.374 327.5 142.374C367.004 142.374 399 173.745 399 212.444C399 270.77 341.192 291.345 263.007 384.187C262.146 385.207 261.073 386.027 259.863 386.589C258.653 387.151 257.334 387.442 256 387.442C254.666 387.442 253.347 387.151 252.137 386.589C250.927 386.027 249.854 385.207 248.993 384.187C170.808 291.345 113 270.77 113 212.444C113 173.745 144.996 142.374 184.5 142.374Z"
                   fill="white"/>
         </g>
     </g>
     <defs>
-        <filter id="filter0_ddiii_4_58" x="13" y="48" width="486" height="496" filterUnits="userSpaceOnUse"
+        <filter id="filter0_f_44_2" x="46" y="66" width="420" height="408" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_44_2"/>
+        </filter>
+        <filter id="filter1_diii_44_2" x="13" y="62.8645" width="486" height="486" filterUnits="userSpaceOnUse"
                 color-interpolation-filters="sRGB">
             <feFlood flood-opacity="0" result="BackgroundImageFix"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
                            result="hardAlpha"/>
-            <feOffset dy="40"/>
+            <feOffset dy="25"/>
             <feGaussianBlur stdDeviation="50"/>
             <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4_58"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                           result="hardAlpha"/>
-            <feOffset dy="20"/>
-            <feGaussianBlur stdDeviation="15"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
-            <feBlend mode="normal" in2="effect1_dropShadow_4_58" result="effect2_dropShadow_4_58"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_4_58" result="shape"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_44_2"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_44_2" result="shape"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
                            result="hardAlpha"/>
             <feOffset dy="-70"/>
-            <feGaussianBlur stdDeviation="40"/>
+            <feGaussianBlur stdDeviation="50"/>
             <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
             <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-            <feBlend mode="normal" in2="shape" result="effect3_innerShadow_4_58"/>
+            <feBlend mode="normal" in2="shape" result="effect2_innerShadow_44_2"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
                            result="hardAlpha"/>
             <feOffset dy="-20"/>
             <feGaussianBlur stdDeviation="37.5"/>
             <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
             <feColorMatrix type="matrix" values="0 0 0 0 0.901961 0 0 0 0 0.192157 0 0 0 0 0.34902 0 0 0 0.35 0"/>
-            <feBlend mode="normal" in2="effect3_innerShadow_4_58" result="effect4_innerShadow_4_58"/>
+            <feBlend mode="normal" in2="effect2_innerShadow_44_2" result="effect3_innerShadow_44_2"/>
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
                            result="hardAlpha"/>
             <feOffset dy="25"/>
             <feGaussianBlur stdDeviation="25"/>
             <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
             <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
-            <feBlend mode="normal" in2="effect4_innerShadow_4_58" result="effect5_innerShadow_4_58"/>
+            <feBlend mode="normal" in2="effect3_innerShadow_44_2" result="effect4_innerShadow_44_2"/>
         </filter>
-        <clipPath id="clip0_4_58">
+        <clipPath id="clip0_44_2">
             <rect width="512" height="512" fill="white"/>
         </clipPath>
     </defs>
