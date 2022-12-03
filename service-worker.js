@@ -38,6 +38,7 @@
 'use strict';
 
 var precacheConfig = [
+  ['assets/extra/background-grid.svg', 'a745e797842b91957ebdb32848136696'],
   ['assets/extra/debate-reviews-tool-preview.mp4', '6a916b88cfa12f37b7368707bfe3c08f'],
   ['assets/extra/favicon.png', 'cdbc82a3d2888276e13a118adb609429'],
   ['assets/extra/love-counter.svg', '85b7670f71c083233cadcfdcdbdf5abe'],
@@ -70,11 +71,11 @@ var precacheConfig = [
   ['assets/images/webp/waving-hand.webp', '764fef4b8f64d5ded7c9eb2b87d6513b'],
   ['css/aos.css', '428ccc75b4d6f0c3219373ca417efb1c'],
   ['css/fonts.min.css', '5fa62c4d5013a89a6ed3d93419060716'],
-  ['css/styles.css', 'd82a0c6b739a259525beaf78b00b55e7'],
-  ['index.html', '751b74727b58dd4deeac5d4fc458a181'],
+  ['css/styles.css', 'ee390ca095a5ff9372ff98b09c7a8c6b'],
+  ['index.html', '9b851fe579e64f6dfe29f4534360b2f9'],
   ['js/aos.min.js', '7f1bad834394d393f2666c2d7b1dc007'],
   ['js/fontawesome.min.js', '7a10f92a04f44bf2bdfcaf374bf17327'],
-  ['js/glorytoukraine.js', '1e0a7483c45b22a53f70591eaa33ea79'],
+  ['js/glorytoukraine.js', 'fff755256c52a185a377e65968724ec6'],
   ['js/header.js', '5159ffccaf997d33ba659536b44a2d80'],
   ['js/instant.min.js', '4202bbf819ffd6c58d76d4c9736b837e'],
   ['js/modal.js', '584463f5ee88a03b04b5d8ff33eb92c4'],

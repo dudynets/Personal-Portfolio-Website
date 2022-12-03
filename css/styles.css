@@ -17,18 +17,18 @@
 
   --gradientTinted: linear-gradient(
     135deg,
-    #e1f549,
-    #29d0be,
-    #6cb8ea,
-    #ff5959,
-    #e1f549,
-    #29d0be,
-    #6cb8ea,
-    #ff5959,
-    #e1f549,
-    #29d0be,
-    #6cb8ea,
-    #ff5959
+    #2c2f16,
+    #112a27,
+    #1b262e,
+    #311818,
+    #2c2f16,
+    #112a27,
+    #1b262e,
+    #311818,
+    #2c2f16,
+    #112a27,
+    #1b262e,
+    #311818
   );
 }
 
@@ -38,7 +38,7 @@
 
 html,
 body {
-  background-color: #111;
+  background-color: #0d0d0d;
   scroll-behavior: smooth;
   font-family: 'Raleway', sans-serif;
   margin: 0;
@@ -233,11 +233,12 @@ header img {
   margin: 0;
   padding: 0;
   position: relative;
+  border-top: 2px solid rgba(255, 255, 255, 0.12);
 }
 
 .anchor {
   position: absolute;
-  top: -90px;
+  top: -88px;
   left: 0;
   width: 100%;
   height: 90px;
@@ -254,7 +255,7 @@ header img {
 .portfolio-heading-icon img {
   height: 80px;
   width: 80px;
-  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5)) drop-shadow(0px 0px 25px rgba(251, 203, 39, 0.25));
 }
 
 .portfolio h1 {
@@ -361,14 +362,14 @@ header img {
 .card {
   margin: 35px;
   transition: all 0.3s ease-in-out !important;
-  background-color: #1c1c1c;
+  background-color: #1a1a1a;
   width: calc(100% / 3 - 70px);
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   color: white;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px, inset 0 0 0 1px hsla(0, 0%, 45%, 0.2);
   pointer-events: all;
 }
 
@@ -525,21 +526,53 @@ header img {
   text-align: center;
   letter-spacing: 1px;
   position: relative;
+  overflow: hidden;
+}
+
+.contact .contact-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .contact-background img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  opacity: 0.12;
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0));
 }
 
 .contact .contact-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: transparent;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.contact .contact-content .wrapper {
   background: var(--gradient);
   background-size: 800% 800%;
   animation: animation 5s linear infinite;
   background-clip: text;
   -moz-background-clip: text;
   -webkit-background-clip: text;
-  margin-top: 20px;
-  position: relative;
+  color: transparent;
 }
 
 .contact .contact-content:after {
@@ -550,6 +583,7 @@ header img {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: -1;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   transform: translate3d(0, 0, 0) scale(1.5, 1.75);
@@ -559,10 +593,9 @@ header img {
   justify-content: center;
   align-items: center;
   filter: blur(20px);
-  opacity: 0.15;
   pointer-events: none;
   border-radius: 50%;
-  border: 5px solid white;
+  border: 5px solid rgba(255, 255, 255, 0.15);
   background: var(--gradientTinted);
   background-size: 800% 800%;
   animation: animation 10s linear infinite, morph 10s ease-in-out infinite;
@@ -583,7 +616,7 @@ header img {
 
 .contact h1 {
   font-size: 100px;
-  line-height: 1;
+  line-height: 1.1;
   margin: 10px 0 0 0;
   font-weight: 700;
   letter-spacing: 0.0125em;
@@ -608,16 +641,16 @@ header img {
   align-items: center;
   font-size: 40px;
   color: transparent;
-  gap: 10px;
-  padding-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  gap: 20px;
+  padding-top: 45px;
+  border-top: 1px solid hsla(0, 0%, 45%, 0.2);
   margin: 30px 7.5% 0 7.5%;
 }
 
 .icons a {
   padding: 8px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid hsla(0, 0%, 45%, 0.2);
   transition: all ease-in-out 0.3s;
 }
 
@@ -776,46 +809,40 @@ img {
   .card:hover {
     scale: 1.05 !important;
     z-index: 1;
+    box-shadow: inset 0 0 0 1px rgba(224, 242, 254, 0.3);
   }
 
   .card-1:hover {
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
     filter: drop-shadow(0 0 100px rgba(233, 70, 105, 0.35));
   }
 
   .card-2:hover {
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
     filter: drop-shadow(0 0 100px rgba(101, 162, 47, 0.35));
   }
 
   .card-3:hover {
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
     filter: drop-shadow(0 0 100px rgba(37, 193, 136, 0.35));
   }
 
   .card-4:hover {
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
     filter: drop-shadow(0 0 100px rgba(20, 114, 161, 0.35));
   }
 
   .card-5:hover {
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
     filter: drop-shadow(0 0 100px rgba(0, 122, 110, 0.35));
   }
 
   .card-6:hover {
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
     filter: drop-shadow(0 0 100px rgba(24, 50, 89, 0.35));
   }
 
   .card-7:hover {
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
     filter: drop-shadow(0 0 100px rgba(51, 51, 51, 0.35));
   }
 
   .scroll-down-text:hover {
     background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(224, 242, 254, 0.3);
     box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
   }
 
@@ -826,11 +853,12 @@ img {
     padding: 9px 10px 11px 10px;
     margin-top: -10px;
     margin-bottom: -10px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(224, 242, 254, 0.3);
   }
 
   .icons a:hover {
     background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(224, 242, 254, 0.3);
     box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
   }
 }
@@ -911,39 +939,40 @@ img {
   .card:active {
     scale: 1.05 !important;
     z-index: 1;
+    box-shadow: inset 0 0 0 1px rgba(224, 242, 254, 0.3);
   }
 
   .card-1:active {
-    box-shadow: rgba(233, 70, 105, 0.35) 0 0 100px 25px;
+    filter: drop-shadow(0 0 100px rgba(233, 70, 105, 0.35));
   }
 
   .card-2:active {
-    box-shadow: rgb(101, 162, 47, 0.35) 0 0 100px 25px;
+    filter: drop-shadow(0 0 100px rgba(101, 162, 47, 0.35));
   }
 
   .card-3:active {
-    box-shadow: rgba(37, 193, 136, 0.35) 0 0 100px 25px;
+    filter: drop-shadow(0 0 100px rgba(37, 193, 136, 0.35));
   }
 
   .card-4:active {
-    box-shadow: rgba(20, 114, 161, 0.35) 0 0 100px 25px;
+    filter: drop-shadow(0 0 100px rgba(20, 114, 161, 0.35));
   }
 
   .card-5:active {
-    box-shadow: rgba(0, 122, 110, 0.35) 0 0 100px 25px;
+    filter: drop-shadow(0 0 100px rgba(0, 122, 110, 0.35));
   }
 
   .card-6:active {
-    box-shadow: rgba(24, 50, 89, 0.35) 0 0 100px 25px;
+    filter: drop-shadow(0 0 100px rgba(24, 50, 89, 0.35));
   }
 
   .card-7:active {
-    box-shadow: rgba(51, 51, 51, 0.35) 0 0 100px 25px;
+    filter: drop-shadow(0 0 100px rgba(51, 51, 51, 0.35));
   }
 
   .scroll-down-text:active {
     background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(224, 242, 254, 0.3);
   }
 
   .more-on-github:active .more-on-github__text {
@@ -953,11 +982,13 @@ img {
     padding: 9px 10px 11px 10px;
     margin-top: -10px;
     margin-bottom: -10px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(224, 242, 254, 0.3);
   }
 
   .icons a:active {
     background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(224, 242, 254, 0.3);
+    box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
   }
 }
 
@@ -1006,6 +1037,7 @@ img {
     padding-top: 25px;
     margin: 18px 7.5% 0 7.5%;
     font-size: 25px;
+    gap: 10px;
   }
 
   .main-emoji img {
@@ -1048,7 +1080,7 @@ img {
   }
 
   .anchor {
-    top: -60px;
+    top: -58px;
     height: 60px;
   }
 
