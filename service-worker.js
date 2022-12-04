@@ -38,7 +38,7 @@
 'use strict';
 
 var precacheConfig = [
-  ['assets/extra/background-grid.svg', 'a745e797842b91957ebdb32848136696'],
+  ['assets/extra/background-grid.svg', '5d836873ef80fb91da77b39dff092922'],
   ['assets/extra/debate-reviews-tool-preview.mp4', '6a916b88cfa12f37b7368707bfe3c08f'],
   ['assets/extra/favicon.png', 'cdbc82a3d2888276e13a118adb609429'],
   ['assets/extra/love-counter.svg', '85b7670f71c083233cadcfdcdbdf5abe'],
@@ -71,8 +71,8 @@ var precacheConfig = [
   ['assets/images/webp/waving-hand.webp', '764fef4b8f64d5ded7c9eb2b87d6513b'],
   ['css/aos.css', '428ccc75b4d6f0c3219373ca417efb1c'],
   ['css/fonts.min.css', '5fa62c4d5013a89a6ed3d93419060716'],
-  ['css/styles.css', 'ee390ca095a5ff9372ff98b09c7a8c6b'],
-  ['index.html', '9b851fe579e64f6dfe29f4534360b2f9'],
+  ['css/styles.css', '3b378f73e9ab0de1d3550f907d6a41e1'],
+  ['index.html', '7c209904c30eb6ff067a7ef792a306a1'],
   ['js/aos.min.js', '7f1bad834394d393f2666c2d7b1dc007'],
   ['js/fontawesome.min.js', '7a10f92a04f44bf2bdfcaf374bf17327'],
   ['js/glorytoukraine.js', 'fff755256c52a185a377e65968724ec6'],
