@@ -326,6 +326,11 @@ header img {
   background: linear-gradient(135deg, #292929, #434343);
 }
 
+.card-8 .card-img,
+.card-8 .card-img-hover {
+  background: linear-gradient(135deg, hsl(158, 94%, 29%), hsl(158, 94%, 39%));
+}
+
 .card-img {
   width: 100%;
   height: 235px;
@@ -840,6 +845,10 @@ img {
     filter: drop-shadow(0 0 100px rgba(51, 51, 51, 0.35));
   }
 
+  .card-8:hover {
+    filter: drop-shadow(0 0 100px rgba(5, 168, 107, 0.35));
+  }
+
   .scroll-down-text:hover {
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(224, 242, 254, 0.3);
@@ -973,6 +982,10 @@ img {
 
   .card-7:active {
     filter: drop-shadow(0 0 100px rgba(51, 51, 51, 0.35));
+  }
+
+  .card-8:active {
+    filter: drop-shadow(0 0 100px rgba(5, 168, 107, 0.35));
   }
 
   .scroll-down-text:active {
