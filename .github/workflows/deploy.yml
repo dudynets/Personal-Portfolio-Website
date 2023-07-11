@@ -25,3 +25,14 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .prettierignore
+            .prettierrc
+            LICENSE
+            package.json
+            package-lock.json
+            README.md
+            sw-precache-config.js
