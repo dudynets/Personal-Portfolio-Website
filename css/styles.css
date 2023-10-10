@@ -70,8 +70,9 @@ header {
 
 .header-fixed {
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid hsla(0, 0%, 45%, 0.2);
   box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
 }
 
@@ -381,11 +382,71 @@ header img {
   width: calc(100% / 3 - 70px);
   position: relative;
   border-radius: 12px;
-  overflow: hidden;
   color: white;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px, inset 0 0 0 1px hsla(0, 0%, 45%, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
   pointer-events: all;
+  outline: 1px solid hsla(0, 0%, 45%, 0.2);
+  outline-offset: -1px;
+  z-index: 2;
+  transform: translateZ(0);
+}
+
+.card:before {
+  --card-tint: transparent;
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 200px);
+  height: calc(100% + 200px);
+  opacity: 0;
+  background: radial-gradient(var(--card-tint) 50%, transparent, transparent);
+  transition: opacity ease-in-out 0.3s;
+  filter: blur(8px);
+}
+
+.card-1:before {
+  --card-tint: rgba(236, 97, 126, 0.25);
+}
+
+.card-2:before {
+  --card-tint: rgba(101, 162, 47, 0.25);
+}
+
+.card-3:before {
+  --card-tint: rgba(37, 193, 136, 0.25);
+}
+
+.card-4:before {
+  --card-tint: rgba(20, 114, 161, 0.25);
+}
+
+.card-5:before {
+  --card-tint: rgba(0, 122, 110, 0.25);
+}
+
+.card-6:before {
+  --card-tint: rgba(24, 50, 89, 0.25);
+}
+
+.card-7:before {
+  --card-tint: rgba(51, 51, 51, 0.25);
+}
+
+.card-8:before {
+  --card-tint: rgba(3, 42, 77, 0.25);
+}
+
+.card-9:before {
+  --card-tint: rgba(5, 168, 107, 0.25);
+}
+
+.card-10:before {
+  --card-tint: rgba(3, 46, 115, 0.25);
 }
 
 .card a {
@@ -607,10 +668,9 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: blur(20px);
+  filter: blur(16px) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.12)) drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.08));
   pointer-events: none;
   border-radius: 50%;
-  border: 5px solid rgba(255, 255, 255, 0.15);
   background: var(--gradientTinted);
   background-size: 800% 800%;
   animation: animation 10s linear infinite, morph 10s ease-in-out infinite;
@@ -749,131 +809,94 @@ img {
 }
 
 @media (hover: hover) {
-  .main .color:hover::after {
+  body:not(.scrolling) .main .color:hover::after {
     height: 0.2em;
   }
 
-  .main .color-alt:hover::after {
+  body:not(.scrolling) .main .color-alt:hover::after {
     height: 0.1em !important;
   }
 
-  .card:hover .card-img-hover {
-    height: 100%;
+  body:not(.scrolling) .card:hover .card-img-hover {
     opacity: 0.35;
   }
 
-  .card:hover .card-info {
+  body:not(.scrolling) .card:hover .card-info {
     background-color: transparent;
     position: relative;
   }
 
-  .card:hover .card-info-hover {
+  body:not(.scrolling) .card:hover .card-info-hover {
     opacity: 1;
   }
 
-  .card:hover .coming-soon {
+  body:not(.scrolling) .card:hover .coming-soon {
     padding: 0;
     background: transparent;
   }
 
-  .more-on-github:hover > span {
+  body:not(.scrolling) .more-on-github:hover > span {
     transform: translateX(70px);
   }
 
-  .more-on-github:hover:before,
-  .more-on-github:hover:after {
+  body:not(.scrolling) .more-on-github:hover:before,
+  body:not(.scrolling) .more-on-github:hover:after {
     transition-delay: 0.3s;
   }
 
-  .more-on-github:hover:before {
+  body:not(.scrolling) .more-on-github:hover:before {
     width: 60px;
   }
 
-  .more-on-github:hover:after {
+  body:not(.scrolling) .more-on-github:hover:after {
     opacity: 1;
     transition-delay: 0.5s;
   }
 
-  .more-on-github:hover span:before {
+  body:not(.scrolling) .more-on-github:hover span:before {
     transition-delay: 0.2s;
   }
 
-  .more-on-github:hover span:before {
+  body:not(.scrolling) .more-on-github:hover span:before {
     width: 0;
   }
 
-  .more-on-github:hover span:after {
+  body:not(.scrolling) .more-on-github:hover span:after {
     opacity: 0;
   }
 
-  .icons a:hover {
+  body:not(.scrolling) .icons a:hover {
     scale: 1.2;
     margin: 0 8px;
     cursor: pointer;
   }
 
-  .close-button:hover {
+  body:not(.scrolling) .close-button:hover {
     text-decoration: underline;
   }
 
-  .cards:hover > .card:not(:hover) {
+  body:not(.scrolling) .cards:hover > .card:not(:hover) {
     scale: 0.95 !important;
     z-index: 2;
   }
 
-  .card:hover {
+  body:not(.scrolling) .card:hover {
     scale: 1.05 !important;
     z-index: 1;
-    box-shadow: inset 0 0 0 1px rgba(224, 242, 254, 0.3);
+    outline: 1px solid hsla(0, 0%, 45%, 0.3);
   }
 
-  .card-1:hover {
-    filter: drop-shadow(0 0 100px rgba(233, 70, 105, 0.35));
+  body:not(.scrolling) .card:hover:before {
+    opacity: 0.7;
   }
 
-  .card-2:hover {
-    filter: drop-shadow(0 0 100px rgba(101, 162, 47, 0.35));
-  }
-
-  .card-3:hover {
-    filter: drop-shadow(0 0 100px rgba(37, 193, 136, 0.35));
-  }
-
-  .card-4:hover {
-    filter: drop-shadow(0 0 100px rgba(20, 114, 161, 0.35));
-  }
-
-  .card-5:hover {
-    filter: drop-shadow(0 0 100px rgba(0, 122, 110, 0.35));
-  }
-
-  .card-6:hover {
-    filter: drop-shadow(0 0 100px rgba(24, 50, 89, 0.35));
-  }
-
-  .card-7:hover {
-    filter: drop-shadow(0 0 100px rgba(51, 51, 51, 0.35));
-  }
-
-  .card-8:hover {
-    filter: drop-shadow(0 0 100px rgba(3, 42, 77, 0.35));
-  }
-
-  .card-9:hover {
-    filter: drop-shadow(0 0 100px rgba(5, 168, 107, 0.35));
-  }
-
-  .card-10:hover {
-    filter: drop-shadow(0 0 100px rgba(3, 46, 115, 0.35));
-  }
-
-  .scroll-down-text:hover {
+  body:not(.scrolling) .scroll-down-text:hover {
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(224, 242, 254, 0.3);
     box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
   }
 
-  .more-on-github:hover .more-on-github__text {
+  body:not(.scrolling) .more-on-github:hover .more-on-github__text {
     background: #1c1c1c;
     box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
     border-radius: 12px;
@@ -883,139 +906,107 @@ img {
     border: 1px solid rgba(224, 242, 254, 0.3);
   }
 
-  .icons a:hover {
+  body:not(.scrolling) .icons a:hover {
     background: rgba(255, 255, 255, 0.12);
     border-color: rgba(224, 242, 254, 0.3);
     box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
   }
 
-  #waving-hand:hover img,
-  #raised-hand:hover img {
+  body:not(.scrolling) #waving-hand:hover img,
+  body:not(.scrolling) #raised-hand:hover img {
     scale: 1.075;
   }
 }
 
 @media (hover: none) {
-  .main .color:active::after {
+  body:not(.scrolling) .main .color:active::after {
     height: 0.2em;
   }
 
-  .main .color-alt:active::after {
+  body:not(.scrolling) .main .color-alt:active::after {
     height: 0.1em !important;
   }
 
-  .card:active .card-img-hover {
+  body:not(.scrolling) .card:active .card-img-hover {
     height: 100%;
     opacity: 0.35;
   }
 
-  .card:active .card-info {
+  body:not(.scrolling) .card:active .card-info {
     background-color: transparent;
     position: relative;
   }
 
-  .card:active .card-info-hover {
+  body:not(.scrolling) .card:active .card-info-hover {
     opacity: 1;
   }
 
-  .card:active .coming-soon {
+  body:not(.scrolling) .card:active .coming-soon {
     padding: 0;
     background: transparent;
   }
 
-  .more-on-github:active > span {
+  body:not(.scrolling) .more-on-github:active > span {
     transform: translateX(70px);
   }
 
-  .more-on-github:active:before,
-  .more-on-github:active:after {
+  body:not(.scrolling) .more-on-github:active:before,
+  body:not(.scrolling) .more-on-github:active:after {
     transition-delay: 0.3s;
   }
 
-  .more-on-github:active:before {
+  body:not(.scrolling) .more-on-github:active:before {
     width: 60px;
   }
 
-  .more-on-github:active:after {
+  body:not(.scrolling) .more-on-github:active:after {
     opacity: 1;
     transition-delay: 0.4s;
   }
 
-  .more-on-github:active span:before {
+  body:not(.scrolling) .more-on-github:active span:before {
     transition-delay: 0.2s;
   }
 
-  .more-on-github:active span:before {
+  body:not(.scrolling) .more-on-github:active span:before {
     width: 0;
   }
 
-  .more-on-github:active span:after {
+  body:not(.scrolling) .more-on-github:active span:after {
     opacity: 0;
   }
 
-  .icons a:active {
+  body:not(.scrolling) .icons a:active {
     scale: 1.2;
     margin: 0 12px;
     cursor: pointer;
   }
 
-  .close-button:active {
+  body:not(.scrolling) .close-button:active {
     text-decoration: underline;
   }
 
-  .cards:active > .card:not(:active) {
+  body:not(.scrolling) .cards:active > .card:not(:active) {
     scale: 0.95 !important;
     z-index: 2;
   }
 
-  .card:active {
+  body:not(.scrolling) .card:active {
     scale: 1.05 !important;
     z-index: 1;
     box-shadow: inset 0 0 0 1px rgba(224, 242, 254, 0.3);
   }
 
-  .card-1:active {
-    filter: drop-shadow(0 0 100px rgba(233, 70, 105, 0.35));
+  body:not(.scrolling) .card:active:before {
+    opacity: 0.7;
   }
 
-  .card-2:active {
-    filter: drop-shadow(0 0 100px rgba(101, 162, 47, 0.35));
-  }
-
-  .card-3:active {
-    filter: drop-shadow(0 0 100px rgba(37, 193, 136, 0.35));
-  }
-
-  .card-4:active {
-    filter: drop-shadow(0 0 100px rgba(20, 114, 161, 0.35));
-  }
-
-  .card-5:active {
-    filter: drop-shadow(0 0 100px rgba(0, 122, 110, 0.35));
-  }
-
-  .card-6:active {
-    filter: drop-shadow(0 0 100px rgba(24, 50, 89, 0.35));
-  }
-
-  .card-7:active {
-    filter: drop-shadow(0 0 100px rgba(51, 51, 51, 0.35));
-  }
-
-  .card-9:active {
-    filter: drop-shadow(0 0 100px rgba(5, 168, 107, 0.35));
-  }
-
-  .card-10:active {
-    filter: drop-shadow(0 0 100px rgba(3, 46, 115, 0.35));
-  }
-
-  .scroll-down-text:active {
+  body:not(.scrolling) .scroll-down-text:active {
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(224, 242, 254, 0.3);
   }
 
-  .more-on-github:active .more-on-github__text {
+  body:not(.scrolling) .more-on-github:active .more-on-github__text {
     background: #1c1c1c;
     box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
     border-radius: 12px;
@@ -1025,14 +1016,14 @@ img {
     border: 1px solid rgba(224, 242, 254, 0.3);
   }
 
-  .icons a:active {
+  body:not(.scrolling) .icons a:active {
     background: rgba(255, 255, 255, 0.12);
     border-color: rgba(224, 242, 254, 0.3);
     box-shadow: rgb(0 0 0 / 10%) 0 0 15px -3px, rgb(0 0 0 / 5%) 0 0 6px -2px;
   }
 
-  #waving-hand:active img,
-  #raised-hand:active img {
+  body:not(.scrolling) #waving-hand:active img,
+  body:not(.scrolling) #raised-hand:active img {
     scale: 1.075;
   }
 }
