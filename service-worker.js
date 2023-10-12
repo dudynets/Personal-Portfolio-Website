@@ -78,7 +78,7 @@ var precacheConfig = [
   ['assets/images/webp/waving-hand.webp', '764fef4b8f64d5ded7c9eb2b87d6513b'],
   ['css/aos.css', '428ccc75b4d6f0c3219373ca417efb1c'],
   ['css/fonts.min.css', '5fa62c4d5013a89a6ed3d93419060716'],
-  ['css/styles.css', '9e99bf6857a24f98010395afd06fd23f'],
+  ['css/styles.css', '64927802004e02a4f4069dcf41b939f9'],
   ['index.html', 'bd90d21dbb54cc72256580351bf354f3'],
   ['js/aos.min.js', '7f1bad834394d393f2666c2d7b1dc007'],
   ['js/fontawesome.min.js', '7a10f92a04f44bf2bdfcaf374bf17327'],
