@@ -65,14 +65,15 @@ header {
   align-items: center;
   z-index: 3;
   transition: all ease-in-out 0.4s;
-  box-shadow: none !important;
+  box-shadow: none;
+  border-bottom: 1px solid transparent;
 }
 
 .header-fixed {
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid hsla(0, 0%, 45%, 0.2);
+  border-color: hsla(0, 0%, 45%, 0.2);
   box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
 }
 
@@ -88,7 +89,7 @@ header img {
 
 .main-background {
   position: absolute;
-  height: 100svh;
+  height: 100dvh;
   max-height: -webkit-fill-available;
   width: 100vw;
   z-index: 1;
@@ -102,7 +103,7 @@ header img {
 .main {
   display: flex;
   align-items: center;
-  height: 100svh;
+  height: 100dvh;
   max-height: -webkit-fill-available;
   background: no-repeat center center fixed;
   background-size: cover;
@@ -598,7 +599,7 @@ header img {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100svh;
+  height: 100dvh;
   text-align: center;
   letter-spacing: 1px;
   position: relative;
@@ -610,7 +611,7 @@ header img {
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 100svh;
+  height: 100dvh;
   z-index: 1;
   display: flex;
   align-items: center;
