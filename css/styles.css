@@ -57,7 +57,7 @@ body {
 
 header {
   position: fixed;
-  height: 90px;
+  height: 80px;
   width: 100%;
   display: flex;
   background-color: transparent;
@@ -77,8 +77,8 @@ header {
 }
 
 header * {
-  height: 50px;
-  width: 155px;
+  height: 45px;
+  aspect-ratio: 155 / 50;
   cursor: pointer;
 }
 
@@ -88,7 +88,7 @@ header img {
 
 .main-background {
   position: absolute;
-  height: 100vh;
+  height: 100svh;
   max-height: -webkit-fill-available;
   width: 100vw;
   z-index: 1;
@@ -102,7 +102,7 @@ header img {
 .main {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 100svh;
   max-height: -webkit-fill-available;
   background: no-repeat center center fixed;
   background-size: cover;
@@ -598,7 +598,7 @@ header img {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100svh;
   text-align: center;
   letter-spacing: 1px;
   position: relative;
@@ -610,7 +610,7 @@ header img {
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -1109,19 +1109,9 @@ img {
     height: 33px;
   }
 
-  header {
-    height: 60px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-  }
-
   .anchor {
     top: -58px;
     height: 60px;
-  }
-
-  header * {
-    height: 30px;
-    width: 93px;
   }
 
   .debate-reviews-tool-modal-video,
